@@ -1,0 +1,12 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 60px;
+  border-bottom: 2px purple solid;
+  align-items: center;
+}
+
+.nav-bar-link {
+  text-decoration: none;
+}
