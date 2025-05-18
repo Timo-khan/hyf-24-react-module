@@ -11,6 +11,9 @@ export const Navbar = () => {
       <Link className="nav-bar-link" href="/why-us">
         Why Us?
       </Link>
+      <Link className="nav-bar-link" href="/products">
+        Products
+      </Link>
     </nav>
   );
 };

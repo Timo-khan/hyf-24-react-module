@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Greeting } from "./(components)/greeting/Greeting";
 import { Cards } from "./(components)/cards/Cards";
-import { PEOPLE } from "./(data)/people";
+import { PEOPLE } from "../data/people";
 import { Person } from "./(components)/person/Person";
 import { Button } from "./(components)/button/Button";
 import { Input } from "./(components)/input/Input";
