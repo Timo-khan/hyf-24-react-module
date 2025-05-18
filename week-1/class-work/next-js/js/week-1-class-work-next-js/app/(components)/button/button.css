@@ -1,0 +1,22 @@
+.btn {
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  background-color: none;
+  width: 80px;
+  margin: 10px;
+}
+
+.primary {
+  color: white;
+  background-color: rgb(140, 167, 251);
+  border: blue 1px solid;
+  border-radius: 6px;
+}
+
+.danger {
+  color: white;
+  background-color: rgb(249, 92, 136);
+  border: rgb(134, 2, 4) 1px solid;
+  border-radius: 6px;
+}

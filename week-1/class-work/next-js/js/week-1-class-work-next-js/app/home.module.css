@@ -1,0 +1,42 @@
+.cards {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  border: 1px rgb(145, 163, 244) solid;
+  border-radius: 20px;
+}
+
+.people {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid greenyellow;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.adult {
+  color: rgb(181, 114, 243);
+}
+.minor {
+  color: rgb(243, 219, 114);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
