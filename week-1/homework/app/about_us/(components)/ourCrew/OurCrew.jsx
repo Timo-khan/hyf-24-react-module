@@ -9,13 +9,9 @@ export const OurCrew = () => {
     <div className={styles.ocMain}>
       <p className={styles.ocSmallHead}>OUR TEAM</p>
       <p className={styles.ocMediumHead}>Who we are</p>
-      <p className={styles.ocHeadPar}>
-        Our crew is the heart and soul of Galactica. We are a diverse team of
-        seasoned space explorers, engineers, and visionaries who are united by a
-        common goal: to make space travel accessible and exciting for all.
-      </p>
+      <p className={styles.ocHeadPar}>{OUR_CREW.BLURB}</p>
       <div className={styles.ocWrapper}>
-        {OUR_CREW.map((x, i) => (
+        {OUR_CREW.CREW_MEMBERS.map((x, i) => (
           <div key={i}>
             <Image src={x.image} alt={x.name} height={280} width={140} />
             <p className={styles.ocName}>{x.name}</p>
