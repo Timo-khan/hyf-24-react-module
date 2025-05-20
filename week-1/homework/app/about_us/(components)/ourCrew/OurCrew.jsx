@@ -1,8 +1,28 @@
+import styles from "./ourCrew.module.css";
+
+import Image from "next/image";
+
+import { OUR_CREW } from "@/data/consts/ourCrew";
+
 export const OurCrew = () => {
-  // TASK - React 1 week 1
-  // Create the "Our Crew section"
-  // Use the descriptions provided in /app/about_us/README.md
-  // Use the pictures from /public/crew
-  // Some inspiration ideas found in /data/inspiration_about_us
-  return <p> ADD OUR CREW HERE </p>;
+  return (
+    <div className={styles.ocMain}>
+      <p className={styles.ocSmallHead}>OUR TEAM</p>
+      <p className={styles.ocMediumHead}>Who we are</p>
+      <p className={styles.ocHeadPar}>
+        Our crew is the heart and soul of Galactica. We are a diverse team of
+        seasoned space explorers, engineers, and visionaries who are united by a
+        common goal: to make space travel accessible and exciting for all.
+      </p>
+      <div className={styles.ocWrapper}>
+        {OUR_CREW.map((x, i) => (
+          <div key={i}>
+            <Image src={x.image} alt={x.name} height={280} width={140} />
+            <p className={styles.ocName}>{x.name}</p>
+            <p className={styles.ocPosition}>{x.position}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };

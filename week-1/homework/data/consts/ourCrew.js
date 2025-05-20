@@ -18,7 +18,7 @@ export const OUR_CREW = [
     id: 3,
     name: "Hana Lee",
     position: "Chief Engineer",
-    image: "",
+    image: "/crew/image-hana-lee.png",
     bio: "With her extensive background in aerospace engineering, Hana Lee is responsible for the state-of-the-art technology that powers our spacecraft. Her innovation ensures that our travelers are always in safe hands.",
   },
   {
@@ -32,7 +32,7 @@ export const OUR_CREW = [
     id: 5,
     name: "Maya Patel",
     position: "Crew Member",
-    image: "",
+    image: "/crew/image-maya-patel.png",
     bio: "Maya brings a unique blend of technical skills and customer service experience to the team. She’s always ready to assist with any needs and to make sure every traveler has an unforgettable experience.",
   },
 ];
