@@ -11,11 +11,13 @@ import { Carrot } from "@/public/svg/Carrot";
 import { ToggleContent } from "./(components)/toggle-content/ToggleContent";
 import { Counter } from "./(components)/counter/Counter";
 import { Form } from "./(components)/form/Form";
+import { Parent } from "./(components)/parent/Parent";
 
 export default function Home() {
   const [panel, setPanel] = useState("");
   const [showCounter, setShowCounter] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [showRodentFilter, setShowRodentFilter] = useState(false);
 
   const primaryHandler = () => {
     setPanel("Primary");
@@ -35,6 +37,10 @@ export default function Home() {
 
   const showFormToggleHandler = () => {
     setShowForm(!showForm);
+  };
+
+  const showRodentFilterToggleHandler = () => {
+    setShowRodentFilter(!showRodentFilter);
   };
 
   return (
@@ -99,6 +105,21 @@ export default function Home() {
           <p className={styles.togglePar}>Show Form</p>
         </div>
         <ToggleContent content={<Form />} show={showForm} />
+        <div className={styles.toggleLine}>
+          <Button
+            appearance="icon"
+            action={showRodentFilterToggleHandler}
+            text={
+              <Carrot
+                appearance={
+                  showRodentFilter ? `carrot-svg` : `carrot-svg closed`
+                }
+              />
+            }
+          />
+          <p className={styles.togglePar}>Show Rodent Filter</p>
+        </div>
+        <ToggleContent content={<Parent />} show={showRodentFilter} />
       </div>
     </div>
   );
