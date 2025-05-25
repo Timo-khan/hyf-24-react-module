@@ -1,6 +1,9 @@
 import "./globals.css";
 
+import { Header } from "./(components)/header/Header";
+
 import { Dosis } from "next/font/google";
+import { Footer } from "./(components)/footer/Footer";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -20,7 +23,11 @@ export const link = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={dosis.className}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
