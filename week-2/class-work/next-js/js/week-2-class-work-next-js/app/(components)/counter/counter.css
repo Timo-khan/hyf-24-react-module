@@ -1,0 +1,37 @@
+.counter-wrap {
+  margin-top: 40px;
+  padding: 40px;
+  border: 2px solid pink;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 240px;
+  min-width: 180px;
+  height: 100px;
+}
+
+.count-display {
+  padding: 10px 20px;
+  border: 1px solid rgb(211, 81, 211);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: rgb(236, 188, 44);
+}
+
+.count-display.minus {
+  color: red;
+}
+
+.count-display.plus {
+  color: rgb(36, 181, 36);
+}
+
+.count-btn-sec {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}

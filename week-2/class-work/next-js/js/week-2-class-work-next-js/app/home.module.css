@@ -66,4 +66,18 @@
 
 .toggleSection {
   margin: 0px 60px 100px;
+  width: 60%;
+  max-width: 600px;
+  min-width: 280px;
+}
+
+.toggleLine {
+  display: flex;
+  flex-direction: row;
+}
+
+.togglePar {
+  color: green;
+  font-size: 20px;
+  margin: 0px 20px;
 }

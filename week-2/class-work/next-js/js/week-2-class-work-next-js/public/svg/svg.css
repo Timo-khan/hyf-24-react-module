@@ -1,0 +1,14 @@
+.carrot-svg {
+  fill: rgb(15, 132, 56);
+  width: 20px;
+  height: 20px;
+  transition: fill 2s ease, rotate 400ms ease;
+}
+
+.carrot-svg.closed {
+  rotate: -90deg;
+}
+
+.carrot-svg:hover {
+  fill: rgb(154, 249, 154);
+}

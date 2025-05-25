@@ -7,9 +7,13 @@ import { CARD_LIST } from "@/data/cards";
 
 import { Card } from "./(components)/card/Card";
 import { Button } from "./(components)/button/Button";
+import { Carrot } from "@/public/svg/Carrot";
+import { ToggleContent } from "./(components)/toggle-content/ToggleContent";
+import { Counter } from "./(components)/counter/Counter";
 
 export default function Home() {
   const [panel, setPanel] = useState("");
+  const [showCounter, setShowCounter] = useState(false);
 
   const primaryHandler = () => {
     setPanel("Primary");
@@ -21,6 +25,10 @@ export default function Home() {
 
   const secondaryHandler = () => {
     setPanel("");
+  };
+
+  const showCounterToggleHandler = () => {
+    setShowCounter(!showCounter);
   };
 
   return (
@@ -58,7 +66,21 @@ export default function Home() {
         ))}
       </div>
       <h3 className={styles.sectionHead}>Extra Content:</h3>
-      <div className={styles.toggleSection}></div>
+      <div className={styles.toggleSection}>
+        <div className={styles.toggleLine}>
+          <Button
+            appearance="icon"
+            action={showCounterToggleHandler}
+            text={
+              <Carrot
+                appearance={showCounter ? `carrot-svg` : `carrot-svg closed`}
+              />
+            }
+          />
+          <p className={styles.togglePar}>Show Counter</p>
+        </div>
+        <ToggleContent content={<Counter />} show={showCounter} />
+      </div>
     </div>
   );
 }
