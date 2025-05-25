@@ -27,7 +27,7 @@ export const Counter = () => {
             : `count-display plus`
         }
       >
-        {count < 10 && count > -1 ? `0${count}` : `${count}`}
+        {count < 10 && count > -1 ? `0${count}` : count}
       </p>
       <div className="count-btn-sec">
         <Button appearance="primary" action={increaseHandler} text="+" />

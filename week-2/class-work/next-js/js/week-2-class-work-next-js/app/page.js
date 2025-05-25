@@ -10,10 +10,12 @@ import { Button } from "./(components)/button/Button";
 import { Carrot } from "@/public/svg/Carrot";
 import { ToggleContent } from "./(components)/toggle-content/ToggleContent";
 import { Counter } from "./(components)/counter/Counter";
+import { Form } from "./(components)/form/Form";
 
 export default function Home() {
   const [panel, setPanel] = useState("");
   const [showCounter, setShowCounter] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   const primaryHandler = () => {
     setPanel("Primary");
@@ -29,6 +31,10 @@ export default function Home() {
 
   const showCounterToggleHandler = () => {
     setShowCounter(!showCounter);
+  };
+
+  const showFormToggleHandler = () => {
+    setShowForm(!showForm);
   };
 
   return (
@@ -80,6 +86,19 @@ export default function Home() {
           <p className={styles.togglePar}>Show Counter</p>
         </div>
         <ToggleContent content={<Counter />} show={showCounter} />
+        <div className={styles.toggleLine}>
+          <Button
+            appearance="icon"
+            action={showFormToggleHandler}
+            text={
+              <Carrot
+                appearance={showForm ? `carrot-svg` : `carrot-svg closed`}
+              />
+            }
+          />
+          <p className={styles.togglePar}>Show Form</p>
+        </div>
+        <ToggleContent content={<Form />} show={showForm} />
       </div>
     </div>
   );
