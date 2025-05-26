@@ -17,7 +17,7 @@ export default function Home() {
   const [panel, setPanel] = useState("");
   const [showCounter, setShowCounter] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [showRodentFilter, setShowRodentFilter] = useState(false);
+  const [showRodentScroller, setShowRodentScroller] = useState(false);
 
   const primaryHandler = () => {
     setPanel("Primary");
@@ -39,8 +39,8 @@ export default function Home() {
     setShowForm(!showForm);
   };
 
-  const showRodentFilterToggleHandler = () => {
-    setShowRodentFilter(!showRodentFilter);
+  const showRodentScrollerToggleHandler = () => {
+    setShowRodentScroller(!showRodentScroller);
   };
 
   return (
@@ -108,18 +108,18 @@ export default function Home() {
         <div className={styles.toggleLine}>
           <Button
             appearance="icon"
-            action={showRodentFilterToggleHandler}
+            action={showRodentScrollerToggleHandler}
             text={
               <Carrot
                 appearance={
-                  showRodentFilter ? `carrot-svg` : `carrot-svg closed`
+                  showRodentScroller ? `carrot-svg` : `carrot-svg closed`
                 }
               />
             }
           />
-          <p className={styles.togglePar}>Show Rodent Filter</p>
+          <p className={styles.togglePar}>Show Rodent Scroller</p>
         </div>
-        <ToggleContent content={<Parent />} show={showRodentFilter} />
+        <ToggleContent content={<Parent />} show={showRodentScroller} />
       </div>
     </div>
   );
