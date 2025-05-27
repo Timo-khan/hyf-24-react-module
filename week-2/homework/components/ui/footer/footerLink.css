@@ -1,0 +1,8 @@
+.footer-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-link svg {
+  margin-right: 10px;
+}
