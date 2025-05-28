@@ -19,7 +19,7 @@ export const Destinations = () => {
     }
 
     console.log(
-      `You seleceted the following planet: ${name}, with the index of ${index}`
+      `You selected the following planet: ${name}, with the index of ${index}`
     );
   };
 
