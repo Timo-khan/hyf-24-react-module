@@ -1,0 +1,15 @@
+.primary {
+  color: white;
+  padding: 10px 20px;
+  border: 1px rgb(10, 32, 113) solid;
+  background-color: rgb(73, 121, 242);
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: background-color 2s ease, color 2s ease;
+}
+
+.primary:hover {
+  color: rgb(31, 79, 200);
+  background-color: rgb(168, 191, 248);
+}
