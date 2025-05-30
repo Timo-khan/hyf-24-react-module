@@ -14,7 +14,6 @@ export const ClickCounter = () => {
 
   return (
     <div className="cc-wrap">
-      <p className="cc-head">Click Counter :</p>
       <div className="cc-display">{count > 9 ? count : `0${count}`}</div>
       <Button
         action={countHandler}
