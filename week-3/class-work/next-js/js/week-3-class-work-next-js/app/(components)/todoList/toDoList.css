@@ -1,0 +1,21 @@
+.tdl-add-item {
+  display: flex;
+  flex-direction: row;
+  width: 220px;
+}
+
+.tdl-input {
+  width: 80%;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px rgb(18, 142, 9) solid;
+  border-radius: 10px;
+}
+
+.tdl-list-item {
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+}
