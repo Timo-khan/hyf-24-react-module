@@ -1,13 +1,13 @@
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 
-import { ClickCounter } from "./(components)/counter/ClickCounter";
+import { Clock } from "../(components)/clock/Clock";
 
-export default function Home() {
+export default function ClockPage() {
   return (
     <div className={styles.pageWrapper}>
       <p className={styles.pageSectionHead}>Click Counter :</p>
       <div className={styles.pageSection}>
-        <ClickCounter />
+        <Clock />
       </div>
     </div>
   );

@@ -35,9 +35,9 @@ export const SimpleForm = () => {
     <div className="form-wrap">
       {/* <pre>{JSON.stringify(input, null, 2)}</pre> */}
       <div className={showInput ? "form-display" : "form-display hide"}>
-        <p>Name: {input.name}</p>
-        <p>Email: {input.email}</p>
-        <p>Message: {input.message}</p>
+        <p className="form-display-line">Name: {input.name}</p>
+        <p className="form-display-line">Email: {input.email}</p>
+        <p className="form-display-line">Message: {input.message}</p>
       </div>
       <label className="form-label" htmlFor="name">
         Name

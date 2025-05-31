@@ -12,7 +12,11 @@
   border-radius: 10px;
   text-align: center;
   color: rgb(236, 9, 194);
-  margin: 0px 0px 10px;
+  margin: 00px 0px 10px;
+}
+
+.form-display-line {
+  margin: 10px 0px;
 }
 
 .form-display.hide {
