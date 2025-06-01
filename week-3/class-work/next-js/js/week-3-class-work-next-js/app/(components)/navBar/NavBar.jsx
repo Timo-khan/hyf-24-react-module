@@ -20,6 +20,9 @@ export const NavBar = () => {
       <Link className="nav-bar-link" href="/data-fetcher">
         Data Fetcher
       </Link>
+      <Link className="nav-bar-link" href="/window-resizer">
+        Window Resizer
+      </Link>
     </nav>
   );
 };
