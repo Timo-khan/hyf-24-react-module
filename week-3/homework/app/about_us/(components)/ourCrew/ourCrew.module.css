@@ -1,0 +1,44 @@
+.ocMain {
+  background-image: url("../../../../public/crew/background-crew-desktop.jpg");
+}
+
+.ocSmallHead {
+  font-size: 14px;
+  color: rgb(172, 172, 172);
+}
+
+.ocMediumHead {
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(227, 229, 241);
+}
+
+.ocHeadPar {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 240;
+  color: rgb(227, 229, 241);
+}
+
+.ocWrapper {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ocName {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(227, 229, 241);
+}
+
+.ocPosition {
+  font-size: 12px;
+  font-weight: 280;
+  color: rgb(172, 172, 172);
+}
