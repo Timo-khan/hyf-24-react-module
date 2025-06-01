@@ -1,9 +1,9 @@
 "use client";
-import classNames from "classnames";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-
 import styles from "./Navbar.module.css";
+
+import { usePathname } from "next/navigation";
+
+import classNames from "classnames";
 import { NavItem } from "./NavItem";
 
 const navbarItems = [
@@ -35,32 +35,17 @@ export const Navbar = () => {
       <nav className={styles.navbar}>
         <div className={styles.navbarBG} />
         <ul className={styles.navbarList}>
-          <NavItem
-            title={navbarItems[0].title}
-            appearance={classNames(styles.navbarLinks, {
-              [styles.isLinkActive]: navbarItems[0].link === currentPath,
-            })}
-            link={navbarItems[0].link}
-            index={1}
-          />
-          <NavItem
-            title={navbarItems[1].title}
-            appearance={classNames(styles.navbarLinks, {
-              [styles.isLinkActive]: navbarItems[1].link === currentPath,
-            })}
-            link={navbarItems[1].link}
-            index={2}
-          />
-          <NavItem
-            title={navbarItems[2].title}
-            appearance={classNames(styles.navbarLinks, {
-              [styles.isLinkActive]: navbarItems[2].link === currentPath,
-            })}
-            link={navbarItems[2].link}
-            index={3}
-          />
-          {/* TASK - React 1 week 3 */}
-          {/* replace repeating content by using navbarItems.map(() => <NavLink />) */}
+          {navbarItems.map((x, i) => (
+            <NavItem
+              key={i}
+              title={x.title}
+              appearance={classNames(styles.navbarLinks, {
+                [styles.isLinkActive]: x.link === currentPath,
+              })}
+              link={x.link}
+              index={i + 1}
+            />
+          ))}
         </ul>
       </nav>
     </header>

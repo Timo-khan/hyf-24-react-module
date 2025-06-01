@@ -1,32 +1,43 @@
 "use client";
 
+import styles from "@/components/destination/destination.module.css";
+
 import { useState } from "react";
 
-import styles from "@/components/destination/destination.module.css";
+import { PLANET_LIST } from "@/data/consts/planetList";
+
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
 import { PlanetCard } from "./(components)/planetCard/PlanetCard";
-import { PLANET_LIST } from "@/data/consts/planetList";
+import { PlanetWishlistItem } from "./(components)/PlanetWishListItem";
 
 export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
 
-  let isPlanetSelected = false;
-  let numberOfPlanets = 0;
-
-  const onAddOrRemovePlanet = (name, index) => {
-    if (!selectedPlanets.includes(index)) {
-      onAddPlanet([...selectedPlanets, index]);
+  const addPlanetHandler = (planet) => {
+    if (!selectedPlanets.includes(planet)) {
+      onAddPlanet([...selectedPlanets, planet]);
     }
 
     console.log(
-      `You selected the following planet: ${name}, with the index of ${index}`
+      `You selected to add the following planet: ${planet.name}, with the index of ${planet.id}`
+    );
+  };
+
+  const removePlanetHandler = (planet) => {
+    if (selectedPlanets.includes(planet)) {
+      const currentList = selectedPlanets.filter((x) => x !== planet);
+      onAddPlanet([...currentList]);
+    }
+
+    console.log(
+      `You selected to remove the following planet: ${planet.name}, with the index of ${planet.id}`
     );
   };
 
   return (
     <div className="fullBGpicture">
       <main className="mainContent">
-        <h1>Travel destinations</h1>
+        <h1>Travel Destinations</h1>
         <section className="card">
           <h2>Wishlist</h2>
           {selectedPlanets.length === 0 ? (
@@ -35,70 +46,29 @@ export const Destinations = () => {
             <p>You have {selectedPlanets.length} planets in your wishlist</p>
           )}
 
-          <b>List coming soon after lesson 3!</b>
-
-          {/* STOP! - this is for week 3!*/}
-          {/* TASK - React 1 week 3 */}
-          {/* Import the AddWishlistItem react component */}
-          {/* <AddWishlistItem /> */}
-          {/* TASK - React 1 week 3 */}
-          {/* Convert the list, so it is using selectedPlanets.map() to display the items  */}
-          {/* Implement the "REMOVE" function */}
-          {/* uncomment the following code snippet: */}
-          {/* 
+          <AddWishlistItem onAddWishlistItem={addPlanetHandler} />
           <h3>Your current wishlist</h3>
           <div className={styles.wishlistList}>
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-            <PlanetWishlistItem 
-              name="europa"
-              onRemove={() => removeFromWishlist('europa')}
-              thumbnail="/destination/image-europa.png"
-            />
-          </div> */}
+            {selectedPlanets.map((x, i) => (
+              <PlanetWishlistItem
+                key={i}
+                planet={x}
+                onRemove={removePlanetHandler}
+              />
+            ))}
+          </div>
         </section>
         <section className="card">
-          <h2>Possible destinations</h2>
-          {/* <pre>{JSON.stringify(selectedPlanets, null, 2)}</pre> */}
-          <PlanetCard
-            name={PLANET_LIST[0].name}
-            description={PLANET_LIST[0].description}
-            isSelected={selectedPlanets.includes(PLANET_LIST[0].id)}
-            thumbnail={PLANET_LIST[0].link}
-            onAddOrRemovePlanet={() =>
-              onAddOrRemovePlanet(PLANET_LIST[0].name, PLANET_LIST[0].id)
-            }
-          />
-          <PlanetCard
-            name={PLANET_LIST[1].name}
-            description={PLANET_LIST[1].description}
-            isSelected={selectedPlanets.includes(PLANET_LIST[1].id)}
-            thumbnail={PLANET_LIST[1].link}
-            onAddOrRemovePlanet={() =>
-              onAddOrRemovePlanet(PLANET_LIST[1].name, PLANET_LIST[1].id)
-            }
-          />
-          <PlanetCard
-            name={PLANET_LIST[2].name}
-            description={PLANET_LIST[2].description}
-            isSelected={selectedPlanets.includes(PLANET_LIST[2].id)}
-            thumbnail={PLANET_LIST[2].link}
-            onAddOrRemovePlanet={() =>
-              onAddOrRemovePlanet(PLANET_LIST[2].name, PLANET_LIST[2].id)
-            }
-          />
-          <PlanetCard
-            name={PLANET_LIST[3].name}
-            description={PLANET_LIST[3].description}
-            isSelected={selectedPlanets.includes(PLANET_LIST[3].id)}
-            thumbnail={PLANET_LIST[3].link}
-            onAddOrRemovePlanet={() =>
-              onAddOrRemovePlanet(PLANET_LIST[3].name, PLANET_LIST[3].id)
-            }
-          />
+          <h2>Possible Destinations</h2>
+          {PLANET_LIST.map((x, i) => (
+            <PlanetCard
+              key={i}
+              planet={x}
+              isSelected={selectedPlanets.includes(x)}
+              onAddPlanet={addPlanetHandler}
+              onRemovePlanet={removePlanetHandler}
+            />
+          ))}
         </section>
       </main>
     </div>

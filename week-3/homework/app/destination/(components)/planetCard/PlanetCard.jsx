@@ -1,22 +1,34 @@
 import styles from "@/components/destination/destination.module.css";
 
 export const PlanetCard = ({
-  name,
-  description,
-  thumbnail,
+  planet,
   isSelected,
-  onAddOrRemovePlanet,
+  onAddPlanet,
+  onRemovePlanet,
 }) => {
+  const addOrRemoveHandler = () => {
+    if (isSelected) {
+      onRemovePlanet(planet);
+    }
+    if (!isSelected) {
+      onAddPlanet(planet);
+    }
+  };
+
   return (
     <div className={styles.planetCard}>
-      <img className={styles.planetThumbnail} src={thumbnail} alt={name} />
+      <img
+        className={styles.planetThumbnail}
+        src={planet.link}
+        alt={planet.name}
+      />
       <div className={styles.planetDescription}>
         <h2>
-          {name} {isSelected ? "- SELECTED" : ""}
+          {planet.name} {isSelected ? "- SELECTED" : ""}
         </h2>
-        <p>{description}</p>
+        <p>{planet.description}</p>
       </div>
-      <button className="roundButton" onClick={onAddOrRemovePlanet}>
+      <button className="roundButton" onClick={addOrRemoveHandler}>
         {isSelected ? "REMOVE" : "ADD PLANET"}
       </button>
     </div>
