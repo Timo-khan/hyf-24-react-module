@@ -17,6 +17,9 @@ export const NavBar = () => {
       <Link className="nav-bar-link" href="/clock">
         Clock
       </Link>
+      <Link className="nav-bar-link" href="/data-fetcher">
+        Data Fetcher
+      </Link>
     </nav>
   );
 };
