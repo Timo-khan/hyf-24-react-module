@@ -1,0 +1,55 @@
+.primary {
+  color: white;
+  background-color: rgb(109, 147, 245);
+  padding: 10px 20px;
+  border: 1px solid rgb(46, 59, 146);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 2s ease, color 2s ease, border 2s ease;
+}
+
+.primary:hover {
+  color: rgb(55, 94, 214);
+  background-color: rgb(218, 226, 248);
+  border: 1px solid rgb(86, 125, 187);
+}
+
+.danger {
+  color: white;
+  background-color: rgb(244, 97, 97);
+  padding: 10px 20px;
+  border: 1px solid rgb(146, 46, 46);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 2s ease, color 2s ease, border 2s ease;
+}
+
+.danger:hover {
+  color: rgb(214, 55, 55);
+  background-color: rgb(248, 218, 218);
+  border: 1px solid rgb(187, 86, 86);
+}
+
+.secondary {
+  color: rgb(109, 147, 245);
+  background-color: whitesmoke;
+  padding: 8px 16px;
+  border: 1px solid rgb(132, 147, 247);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 2s ease, color 2s ease, border 2s ease;
+}
+
+.secondary:hover {
+  color: white;
+  background-color: rgb(132, 162, 238);
+  border: 1px solid rgb(126, 143, 249);
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  cursor: pointer;
+  height: 28px;
+}
