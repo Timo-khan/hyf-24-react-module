@@ -1,0 +1,21 @@
+.pp-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.pp-photo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp-img-date {
+  color: rgb(251, 122, 144);
+}
+
+.pp-img {
+  width: 80%;
+  max-width: 680px;
+  margin: 20px;
+}

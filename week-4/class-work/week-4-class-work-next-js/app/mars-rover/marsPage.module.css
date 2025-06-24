@@ -1,0 +1,12 @@
+.marsRoverPageWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marsRoverHead {
+  color: rgb(1, 175, 117);
+  font-size: 22px;
+  font-weight: 280;
+  margin: 20px;
+}
