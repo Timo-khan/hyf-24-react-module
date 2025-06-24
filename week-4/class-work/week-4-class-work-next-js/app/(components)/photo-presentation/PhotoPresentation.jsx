@@ -28,7 +28,7 @@ export const PhotoPresentation = () => {
       {data.length != 0 &&
         data.map((x, i) => (
           <div key={i} className="pp-photo-block">
-            <p className="pp-img-date">Taken on - {x.earth_date}</p>
+            <p className="pp-img-date">Captured - {x.earth_date}</p>
             <img className="pp-img" src={x.img_src} />
           </div>
         ))}
