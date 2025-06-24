@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import { getMarsRoverPhotos } from "@/services/nasaApiServices";
 
-export const PhotoPresentation = () => {
+export const PhotoPresentation = ({ apiKey }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const PhotoPresentation = () => {
 
   const getPhotos = async () => {
     try {
-      const response = await getMarsRoverPhotos();
+      const response = await getMarsRoverPhotos(apiKey);
       setData(response);
     } catch (e) {
       console.log(e.message ?? "Something went wrong");

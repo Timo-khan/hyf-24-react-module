@@ -1,4 +1,4 @@
-export const API_KEY = "RjNJg3AgG1pTNjgjjzj7FFkcNvx76zRYxTRsgmK4";
+export const API_KEY = process.env.NASA_API_KEY;
 
 export const NASA_URLS = {
   PIC_OF_THE_DAY: "https://api.nasa.gov/planetary/apod",
