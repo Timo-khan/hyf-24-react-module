@@ -1,0 +1,36 @@
+.data-fetcher-wrapper {
+  width: 100%;
+  overflow-y: scroll;
+  height: 600px;
+}
+
+.data-fetcher-block {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid rgb(8, 175, 175);
+  border-radius: 10px;
+}
+
+.data-fetcher-data-head {
+  font-size: 16px;
+  color: rgb(244, 96, 207);
+  margin: 10px 0px;
+}
+
+.ata-fetcher-loading {
+  font-size: 20px;
+}
+
+.data-fetcher-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data-fetcher-error-head {
+  font-size: 20px;
+  color: red;
+  margin: 20px 0px;
+  font-weight: 600;
+}
