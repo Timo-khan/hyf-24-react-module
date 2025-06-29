@@ -11,6 +11,9 @@ export const NavBar = () => {
       <Link href="/mars-rover" className="nav-bar-link">
         Mars Rover Photos
       </Link>
+      <Link href="/epic-images" className="nav-bar-link">
+        EPIC Camera Images
+      </Link>
       <Link href="/blog" className="nav-bar-link">
         Blogs
       </Link>

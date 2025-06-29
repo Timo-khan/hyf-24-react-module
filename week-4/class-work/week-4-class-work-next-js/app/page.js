@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./page.module.css";
 
 import { NASA_URLS, API_KEY } from "@/data/nasaApi";
 
 export default async function Home() {
   const response = await fetch(
-    `${NASA_URLS.PIC_OF_THE_DAY}?api_key=${API_KEY}`
+    `${NASA_URLS.BASE_URL}${NASA_URLS.PIC_OF_THE_DAY}?api_key=${API_KEY}`
   );
   const data = await response.json();
 
