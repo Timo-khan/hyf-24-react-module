@@ -1,5 +1,5 @@
 import { BLOG_POST_LIST } from "@/data/blogPosts";
-import { BlogPresentation } from "../(components)/blogs/BlogPresentation";
+import { BlogPresentation } from "../(components)/blog/BlogPresentation";
 import styles from "./blogPage.module.css";
 
 export default function Blog() {

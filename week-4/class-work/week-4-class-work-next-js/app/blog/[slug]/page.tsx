@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { BLOG_POST_LIST } from "@/data/blogPosts";
 
-import { BlogDetail } from "@/app/(components)/blogs/BlogDetail";
+import { BlogDetail } from "@/app/(components)/blog/BlogDetail";
 
 export default function BlogPost() {
   const pathname = usePathname();

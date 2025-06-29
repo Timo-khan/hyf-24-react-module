@@ -1,8 +1,13 @@
+import { BlogPostVm } from "@/models/BlogPostVm";
 import "./blogPresentation.css";
 
 import Link from "next/link";
 
-export const BlogPresentation = ({ blogPosts }) => {
+type Props = {
+  blogPosts: BlogPostVm[];
+};
+
+export const BlogPresentation = ({ blogPosts }: Props) => {
   return (
     <div className="post-block-wrap">
       {blogPosts &&

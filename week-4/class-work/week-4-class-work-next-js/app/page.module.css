@@ -41,5 +41,6 @@
 
 .homePagePictureSectionImage {
   width: 94%;
+  height: auto;
   max-width: 680px;
 }

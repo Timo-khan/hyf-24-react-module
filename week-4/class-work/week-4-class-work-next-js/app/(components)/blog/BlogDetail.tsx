@@ -1,8 +1,13 @@
+import { BlogPostVm } from "@/models/BlogPostVm";
 import "./blogDetail.css";
 
 import Link from "next/link";
 
-export const BlogDetail = ({ post }) => {
+type Props = {
+  post: BlogPostVm;
+};
+
+export const BlogDetail = ({ post }: Props) => {
   return (
     <div className="blog-detail-wrap">
       <div className="blog-detail-block">
