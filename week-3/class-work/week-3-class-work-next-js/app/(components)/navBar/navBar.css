@@ -1,0 +1,20 @@
+.nav-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  border-bottom: 2px solid rgb(181, 64, 239);
+}
+
+.nav-bar-link {
+  text-decoration: none;
+  color: rgb(255, 162, 0);
+  font-size: 20px;
+
+  transition: color 2s ease;
+}
+
+.nav-bar-link:hover {
+  color: bisque;
+}

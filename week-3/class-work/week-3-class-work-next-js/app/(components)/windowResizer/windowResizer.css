@@ -1,0 +1,16 @@
+.window-resizer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-resizer-head {
+  color: rgb(68, 127, 246);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.window-resizer-size {
+  color: rgb(134, 3, 177);
+  font-size: 18px;
+}
