@@ -45,6 +45,7 @@ export const EpicImageFinder = ({ apiKey }: Props) => {
     const imageInput = e.target.value;
 
     if (imageInput === "reset") {
+      query.current = "";
       setImage(null);
       return;
     }
