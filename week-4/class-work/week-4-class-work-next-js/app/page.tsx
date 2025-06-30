@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { NASA_URLS, API_KEY } from "@/data/nasaApi";
 
-import { PictureOfTheDayVm } from "@/models/PictureOfTheDayVm";
+import { PictureOfTheDayVm } from "@/models/nasa-api/PictureOfTheDayVm";
 
 export default async function Home() {
   const response = await fetch(

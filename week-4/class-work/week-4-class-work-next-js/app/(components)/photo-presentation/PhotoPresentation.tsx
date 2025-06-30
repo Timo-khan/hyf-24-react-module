@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { getMarsRoverPhotos } from "@/services/nasaApiServices";
-import { MarsPhotoVm } from "@/models/MarsPhotoVm";
+import { MarsPhotoVm } from "@/models/nasa-api/MarsPhotoVm";
 
 type Props = {
   apiKey: string;
