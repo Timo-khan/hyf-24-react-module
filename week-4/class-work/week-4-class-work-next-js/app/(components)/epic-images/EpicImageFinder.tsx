@@ -44,7 +44,10 @@ export const EpicImageFinder = ({ apiKey }: Props) => {
   const imageHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     const imageInput = e.target.value;
 
-    if (imageInput === null) return;
+    if (imageInput === "reset") {
+      setImage(null);
+      return;
+    }
 
     console.log(imageInput);
     query.current = `${NASA_URLS.BASE_URL}${
@@ -74,7 +77,7 @@ export const EpicImageFinder = ({ apiKey }: Props) => {
             className="epic-select"
             onChange={(e: ChangeEvent<HTMLSelectElement>) => imageHandler(e)}
           >
-            <option selected className="epic-option">
+            <option selected value="reset" className="epic-option">
               -- select image to display--
             </option>
             {imageLinks.map((x, i) => (
