@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
 import "./globals.css";
+import { Footer } from "./(components)/footer/Footer";
+import { NavBar } from "./(components)/nav-bar/NavBar";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dosis.className}>
+        <NavBar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
