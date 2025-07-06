@@ -3,10 +3,11 @@
 import "./mealList.css";
 
 import { useState, useEffect } from "react";
-
-import { MealVm } from "@/models/meals/MealVm";
+import Link from "next/link";
 
 import { getMeals } from "@/services/mealsServices";
+
+import { MealVm } from "@/models/meals/MealVm";
 
 export const MealList = () => {
   const [meals, setMeals] = useState<MealVm[]>([]);
@@ -42,15 +43,14 @@ export const MealList = () => {
       )}
       {/* <pre>{JSON.stringify(meals, null, 2)}</pre> */}
       {meals.map((x, i) => (
-        <div key={i} className="meals-block">
+        <Link
+          href={`/meals/meal-details-${x.MealId}`}
+          key={i}
+          className="meals-block"
+        >
           <p className="meals-head">{x.Title}</p>
-          <p className="meals-body">{x.Location}</p>
           <p className="meals-body">{x.Price.toFixed(2)}€</p>
-          <p className="meals-body">When: {new Date(x.When).toDateString()}</p>
-          <p className="meals-body">
-            At: {new Date(x.When).toLocaleTimeString()}
-          </p>
-        </div>
+        </Link>
       ))}
     </div>
   );

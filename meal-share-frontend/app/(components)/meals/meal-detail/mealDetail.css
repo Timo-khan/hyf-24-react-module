@@ -1,11 +1,10 @@
-.meals-wrap {
+.meal-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow-y: scroll;
-  height: 680px;
   width: 80%;
+  height: 420px;
 }
 
 .loading-head {
@@ -13,7 +12,7 @@
   font-weight: 400;
 }
 
-.meals-error-block {
+.meal-error-block {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,29 +20,39 @@
   height: 280px;
 }
 
-.meals-error-head {
+.meal-error-head {
   margin-bottom: 40px;
   font-size: 20px;
   color: red;
 }
 
-.meals-error-body {
+.meal-error-body {
   font-size: 14px;
 }
 
-.meals-block {
+.meal-block {
   display: flex;
   flex-direction: column;
   width: 80%;
+  text-decoration: none;
+  padding: 12px;
+  margin-top: 20px;
 }
 
-.meals-head {
+.meal-head {
   font-size: 20px;
   color: rgb(51, 121, 250);
   margin: 14px 0px;
 }
 
-.meals-body {
+.meal-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(182, 120, 6);
+  margin: 20px 0px;
+}
+
+.meal-body {
   color: rgb(3, 176, 63);
-  margin: 2px 0px;
+  margin: 4px 0px;
 }

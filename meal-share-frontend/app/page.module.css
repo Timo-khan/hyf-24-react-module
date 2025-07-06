@@ -6,7 +6,8 @@
 
 .pageSection {
   margin: 20px;
-  width: 42%;
+  width: 48%;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +19,24 @@
 .pageSectionHead {
   text-align: center;
   margin: 20px;
-  color: rgb(31, 143, 31);
-  font-size: 20px;
+  color: rgb(204, 65, 214);
+  font-size: 24px;
   font-weight: 320;
+}
+
+.pageSectionParagraph {
+  font-size: 20px;
+  font-weight: 28;
+  color: rgb(50, 168, 186);
+}
+
+.pageSectionLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(24, 175, 175);
+  transition: color 1s ease;
+}
+
+.pageSectionLink:hover {
+  color: rgb(148, 251, 251);
 }

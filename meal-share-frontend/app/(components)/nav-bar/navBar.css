@@ -1,0 +1,22 @@
+.nav-bar-wrap {
+  height: 68px;
+  border-bottom: 2px solid plum;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-bar-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: orange;
+  border-bottom: solid 1px rgb(255, 165, 0, 0);
+
+  transition: color 1s ease, border-bottom 2s ease;
+}
+
+.nav-bar-link:hover {
+  color: rgb(249, 225, 182);
+  border-bottom: 1px solid rgb(249, 225, 182);
+}
