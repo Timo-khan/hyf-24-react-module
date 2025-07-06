@@ -1,15 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./navBar.css";
 
 import Link from "next/link";
+import { ThemeContextClass } from "@/types/theme";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export const NavBar = () => {
-  const [theme, setTheme] = useState<boolean>(false);
+  const { theme, setTheme } = useContext<ThemeContextClass>(ThemeContext);
+  const [themeIndicator, setThemeIndicator] = useState<boolean>(true);
 
-  const handleTheme = () => {
-    setTheme(!theme);
+  const handleThemeChange = () => {
+    console.log(`change ${theme}`);
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+    setThemeIndicator(!themeIndicator);
   };
 
   return (
@@ -26,13 +35,21 @@ export const NavBar = () => {
         </Link>
       </div>
       <div
-        onClick={handleTheme}
-        className={theme ? "nav-bar-switch dark" : "nav-bar-switch"}
+        onClick={handleThemeChange}
+        className={themeIndicator ? "nav-bar-switch dark" : "nav-bar-switch"}
       >
-        <div className={theme ? "nav-bar-slider dark-sl" : "nav-bar-slider"}>
-          <p className={theme ? "switch-text dark-t" : "switch-text"}>Dark</p>
+        <div
+          className={
+            themeIndicator ? "nav-bar-slider dark-sl" : "nav-bar-slider"
+          }
+        >
+          <p className={themeIndicator ? "switch-text dark-t" : "switch-text"}>
+            Dark
+          </p>
           <div
-            className={theme ? "switch-slider dark-sw" : "switch-slider"}
+            className={
+              themeIndicator ? "switch-slider dark-sw" : "switch-slider"
+            }
           ></div>
           <p className="switch-text">Light</p>
         </div>
