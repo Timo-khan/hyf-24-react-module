@@ -8,7 +8,6 @@ export default function Home() {
       <div className={styles.pageSection}>
         <MealList />
       </div>
-      ;
     </div>
   );
 }
