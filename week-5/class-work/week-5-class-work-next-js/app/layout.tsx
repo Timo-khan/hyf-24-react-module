@@ -5,7 +5,7 @@ import { Dosis } from "next/font/google";
 
 import { Footer } from "./(components)/footer/Footer";
 import { NavBar } from "./(components)/nav-bar/NavBar";
-import { ContextProvider } from "@/context/ContextProvider";
+import { ThemeContextProvider } from "@/context/ThemeContext";
 
 const dosis = Dosis({
   subsets: ["latin"],
@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dosis.className}>
-        <NavBar />
-        <main>
-          <ContextProvider>{children}</ContextProvider>
-        </main>
-        <Footer />
+        <ThemeContextProvider>
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeContextProvider>
       </body>
     </html>
   );

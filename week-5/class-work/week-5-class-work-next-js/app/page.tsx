@@ -1,18 +1,22 @@
 "use client";
 
-// import { useContext } from "react";
+import styles from "./page.module.css";
 
-// import { ThemeContext } from "@/context/ThemeContext";
 import { HomePage } from "./(components)/home-page/HomePage";
+import { useThemeContext } from "@/context/ThemeContext";
 
 export default function Home() {
-  // const theme = useContext(ThemeContext);
+  const { theme } = useThemeContext();
 
   return (
-    <div>
-      {/* <ThemeContext value={theme}> */}
-      <HomePage />
-      {/* </ThemeContext> */}
+    <div
+      className={
+        theme === "dark"
+          ? `${styles.pageWrap} ${styles.darkPage}`
+          : `${styles.pageWrap} ${styles.lightPage}`
+      }
+    >
+      <HomePage head="Home Page" />
     </div>
   );
 }

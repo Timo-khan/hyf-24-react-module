@@ -5,6 +5,16 @@
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid pink;
+
+  transition: background-color 2s ease;
+}
+
+.theme-dark {
+  background-color: rgb(11, 11, 88);
+}
+
+.theme-light {
+  background-color: rgb(255, 254, 249);
 }
 
 .nav-bar-link-block {

@@ -1,0 +1,7 @@
+export const LOREM_IPSUM = [
+  "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+  "Suscipit mollis vivamus tincidunt lobortis amet libero lacus. Aliquet senectus sagittis vulputate purus volutpat eros ac ad eros integer. Ligula euismod venenatis aliquet lacinia aliquet ligula quisque venenatis inceptos platea magna. Risus bibendum duis porta sit at neque faucibus mattis convallis integer tristique potenti iaculis orci.",
+  "Hac orci rhoncus augue hac elementum. Leo taciti vivamus interdum congue fermentum consectetur dictum tristique dui maecenas tortor.",
+  "Habitant arcu pretium hac maximus morbi condimentum vivamus feugiat euismod facilisis rutrum metus tellus ex primis. Cras rhoncus malesuada dolor dictumst proin arcu viverra ipsum turpis quam bibendum iaculis arcu. Fames pharetra dictumst nibh ultrices adipiscing.",
+  "Fermentum tristique libero taciti justo ante mollis arcu. Rutrum lacus porttitor aenean in taciti congue finibus. Class hac elit sed in magna ultrices aliquet mauris duis iaculis nulla vulputate cras suscipit.",
+];

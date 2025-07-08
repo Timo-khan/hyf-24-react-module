@@ -1,28 +1,31 @@
 "use client";
 
-import { useContext, useState } from "react";
 import "./navBar.css";
 
 import Link from "next/link";
-import { ThemeContextClass } from "@/types/theme";
-import { ThemeContext } from "@/context/ThemeContext";
+import { useState } from "react";
+
+import { useThemeContext } from "@/context/ThemeContext";
 
 export const NavBar = () => {
-  const { theme, setTheme } = useContext<ThemeContextClass>(ThemeContext);
-  const [themeIndicator, setThemeIndicator] = useState<boolean>(true);
+  const { theme, setTheme } = useThemeContext();
 
   const handleThemeChange = () => {
-    console.log(`change ${theme}`);
     if (theme === "dark") {
       setTheme("light");
     } else {
       setTheme("dark");
     }
-    setThemeIndicator(!themeIndicator);
   };
 
   return (
-    <nav className="nav-bar-wrap">
+    <nav
+      className={
+        theme === "dark"
+          ? "nav-bar-wrap theme-dark"
+          : "nav-bar-wrap theme-light"
+      }
+    >
       <div className="nav-bar-link-block">
         <Link className="nav-bar-link" href="/">
           Home
@@ -36,19 +39,21 @@ export const NavBar = () => {
       </div>
       <div
         onClick={handleThemeChange}
-        className={themeIndicator ? "nav-bar-switch dark" : "nav-bar-switch"}
+        className={theme === "dark" ? "nav-bar-switch dark" : "nav-bar-switch"}
       >
         <div
           className={
-            themeIndicator ? "nav-bar-slider dark-sl" : "nav-bar-slider"
+            theme === "dark" ? "nav-bar-slider dark-sl" : "nav-bar-slider"
           }
         >
-          <p className={themeIndicator ? "switch-text dark-t" : "switch-text"}>
+          <p
+            className={theme === "dark" ? "switch-text dark-t" : "switch-text"}
+          >
             Dark
           </p>
           <div
             className={
-              themeIndicator ? "switch-slider dark-sw" : "switch-slider"
+              theme === "dark" ? "switch-slider dark-sw" : "switch-slider"
             }
           ></div>
           <p className="switch-text">Light</p>
