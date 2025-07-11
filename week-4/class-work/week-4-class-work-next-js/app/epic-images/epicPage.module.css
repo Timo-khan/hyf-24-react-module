@@ -1,0 +1,12 @@
+.epicPageWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.epicHead {
+  color: rgb(172, 1, 175);
+  font-size: 22px;
+  font-weight: 280;
+  margin: 20px;
+}

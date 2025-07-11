@@ -1,0 +1,47 @@
+.blog-detail-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 680px;
+  margin: 20px;
+}
+
+.blog-detail-block {
+  padding: 40px;
+}
+
+.blog-detail-head {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 280;
+  color: rgb(207, 60, 244);
+  margin: 20px;
+}
+
+.blog-detail-date {
+  margin: 10px 0;
+  font-weight: 600;
+  color: rgb(4, 152, 103);
+}
+
+.blog-detail-body {
+  font-weight: 240;
+  color: rgb(27, 145, 249);
+}
+
+.blog-detail-author {
+  margin: 20px 0;
+  font-weight: 600;
+  color: rgb(246, 125, 39);
+}
+
+.blog-detail-link {
+  margin-left: 40px;
+  color: blueviolet;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 2s ease;
+}
+
+.blog-detail-link:hover {
+  color: rgb(223, 197, 248);
+}
