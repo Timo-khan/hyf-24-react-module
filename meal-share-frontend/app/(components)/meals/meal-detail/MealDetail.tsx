@@ -11,6 +11,7 @@ export const MealDetail = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+
   const pathName = usePathname();
   const stringArray = pathName.split("-");
   const mealId = stringArray[stringArray.length - 1];
