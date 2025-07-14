@@ -1,7 +1,13 @@
 import http from "../data/api/httpCommon";
 
-export const getMeals = async (filter: string = "") => {
-  const result = await http.get(`meals?title=${filter}`);
+export const getMeals = async (
+  filter: string = "",
+  sortKey: string = "mealId",
+  sortDir: string = "asc"
+) => {
+  const path = `meals?title=${filter}&sortKey=${sortKey}&sortDir=${sortDir}`;
+
+  const result = await http.get(path);
   console.log(result.data.data);
   return result.data.data;
 };

@@ -10,10 +10,15 @@ import { getMeals } from "@/services/mealsServices";
 import { MealVm } from "@/models/meals/MealVm";
 import { ErrorResponse } from "@/models/api/ErrorResponse";
 
+type SortDir = "asc" | "desc";
+type SortKey = "mealId" | "price" | "title";
+
 export const MealList = () => {
   const [meals, setMeals] = useState<MealVm[]>([]);
 
   const [filter, setFilter] = useState<string>("");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [sortKey, setSortKey] = useState<SortKey>("mealId");
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
@@ -22,12 +27,16 @@ export const MealList = () => {
   useEffect(() => {
     setIsError(false);
     setError("");
-    fetchData(filter);
-  }, [filter]);
+    fetchData(filter, sortKey, sortDir);
+  }, [filter, sortDir, sortKey]);
 
-  const fetchData = async (filter: string = "") => {
+  const fetchData = async (
+    filter: string = "",
+    sortKey: string,
+    sortDir: string
+  ) => {
     try {
-      const response = await getMeals(filter);
+      const response = await getMeals(filter, sortKey, sortDir);
       setMeals(response);
     } catch (e: unknown) {
       const error: ErrorResponse = e as ErrorResponse;
@@ -45,6 +54,16 @@ export const MealList = () => {
     setFilter(e.target.value);
   };
 
+  const sortKeyInputHandler = () => {
+    if (sortKey === "mealId") {
+      setSortKey("title");
+    } else if (sortKey === "title") {
+      setSortKey("price");
+    } else {
+      setSortKey("mealId");
+    }
+  };
+
   return (
     <div className="meals-container">
       <div className="meals-form">
@@ -54,10 +73,23 @@ export const MealList = () => {
           type="text"
           placeholder="Find a Meal"
         />
-        <div>
-          <span>Sort Meals by :</span>
-          <span>Meal</span>
-          <span>Price</span>
+        <div className="meals-select-wrap">
+          <div onClick={sortKeyInputHandler} className="meals-select">
+            <span className="meals-select-fixed">Sort Meals on - </span>
+            <div
+              className={
+                sortKey === "mealId"
+                  ? "meals-options"
+                  : sortKey === "price"
+                  ? "meals-options option-price"
+                  : "meals-options option-title"
+              }
+            >
+              <span className="meals-option">Meal</span>
+              <span className="meals-option">Price</span>
+            </div>
+          </div>
+          <div className="meals-sort-dir-box">d</div>
         </div>
       </div>
       <div className="meals-wrap">

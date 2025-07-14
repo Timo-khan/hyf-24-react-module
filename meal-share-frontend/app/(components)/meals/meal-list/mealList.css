@@ -21,6 +21,82 @@
   border: 2px rgb(244, 124, 144) solid;
 }
 
+.meals-select-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meals-select {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding: 6px;
+  border: 2px rgb(88, 153, 245) solid;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 68%;
+  height: 20px;
+  background-color: white;
+
+  transition: border 2s ease, background-color 2s ease;
+}
+
+.meals-select:hover {
+  border: 2px rgb(234, 158, 251) solid;
+  background-color: rgb(236, 244, 251);
+}
+
+.meals-select-fixed {
+  color: rgb(247, 177, 127);
+}
+
+.meals-options {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: -22px;
+  left: 6px;
+  transition: bottom 1s ease;
+}
+
+.meals-option {
+  width: 32px;
+  color: rgb(246, 121, 31);
+  font-weight: 480;
+  margin-bottom: 10px;
+}
+
+.option-price {
+  bottom: 29px;
+}
+
+.option-title {
+  bottom: -1px;
+}
+
+.meals-sort-dir-box {
+  margin-top: 10px;
+  width: 10%;
+  height: 20px;
+  border: 2px rgb(88, 153, 245) solid;
+  border-radius: 6px;
+  padding: 6px;
+  background-color: white;
+  cursor: pointer;
+
+  transition: border 2s ease, background-color 2s ease;
+}
+
+.meals-sort-dir-box:hover {
+  border: 2px rgb(234, 158, 251) solid;
+  background-color: rgb(236, 244, 251);
+}
+
 .meals-wrap {
   display: flex;
   flex-direction: column;
