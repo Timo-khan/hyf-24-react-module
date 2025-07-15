@@ -1,0 +1,11 @@
+.icon {
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.down {
+  rotate: 180deg;
+}

@@ -1,0 +1,21 @@
+.arrow {
+  cursor: pointer;
+}
+
+.arrow path {
+  fill: rgb(127, 178, 249);
+
+  transition: fill 1s ease;
+}
+
+.asc path {
+  fill: rgb(4, 95, 221);
+}
+
+.desc path {
+  fill: rgb(4, 95, 221);
+}
+
+.down {
+  rotate: 180deg;
+}

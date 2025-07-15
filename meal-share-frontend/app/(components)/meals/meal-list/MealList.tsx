@@ -9,6 +9,7 @@ import { getMeals } from "@/services/mealsServices";
 
 import { MealVm } from "@/models/meals/MealVm";
 import { ErrorResponse } from "@/models/api/ErrorResponse";
+import { Arrow } from "@/public/svgs/Arrow";
 
 type SortDir = "asc" | "desc";
 type SortKey = "mealId" | "price" | "title";
@@ -64,6 +65,14 @@ export const MealList = () => {
     }
   };
 
+  const toggleSortDirHandler = () => {
+    if (sortDir === "asc") {
+      setSortDir("desc");
+    } else {
+      setSortDir("asc");
+    }
+  };
+
   return (
     <div className="meals-container">
       <div className="meals-form">
@@ -89,7 +98,12 @@ export const MealList = () => {
               <span className="meals-option">Price</span>
             </div>
           </div>
-          <div className="meals-sort-dir-box">d</div>
+          <div onClick={toggleSortDirHandler} className="meals-sort-dir-box">
+            <Arrow appearance={sortDir === "asc" ? "arrow asc" : "arrow"} />
+            <Arrow
+              appearance={sortDir === "desc" ? "arrow down desc" : "arrow down"}
+            />
+          </div>
         </div>
       </div>
       <div className="meals-wrap">
