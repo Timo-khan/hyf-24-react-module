@@ -1,11 +1,77 @@
-.icon {
+.create {
   border: none;
   background: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 10px;
+  margin: 6px;
+  border: 2px solid rgb(57, 138, 87);
+  border-radius: 8px;
+  background-color: rgb(79, 211, 32);
+  color: white;
+  cursor: pointer;
+
+  transition: color 1s ease, background-color 1s ease, border 1s ease;
 }
 
-.down {
-  rotate: 180deg;
+.create:hover {
+  background-color: rgb(186, 247, 164);
+  color: rgb(72, 199, 25);
+  border: 2px solid rgb(53, 208, 110);
+}
+
+.create:active {
+  background-color: rgb(74, 155, 45);
+  color: rgb(180, 249, 155);
+  border: 2px solid rgb(184, 247, 207);
+}
+
+.cancel {
+  border: none;
+  background: none;
+  padding: 10px;
+  margin: 6px;
+  border: 2px solid rgb(188, 88, 88);
+  border-radius: 8px;
+  background-color: rgb(246, 79, 79);
+  color: white;
+  cursor: pointer;
+
+  transition: color 1s ease, background-color 1s ease, border 1s ease;
+}
+
+.cancel:hover {
+  background-color: rgb(247, 168, 164);
+  color: rgb(199, 25, 25);
+  border: 2px solid rgb(208, 53, 53);
+}
+
+.cancel:active {
+  background-color: rgb(155, 45, 45);
+  color: rgb(249, 155, 155);
+  border: 2px solid rgb(247, 190, 184);
+}
+
+.primary {
+  border: none;
+  background: none;
+  padding: 10px;
+  margin: 6px;
+  border: 2px solid rgb(60, 159, 240);
+  border-radius: 8px;
+  background-color: rgb(110, 174, 248);
+  color: white;
+  cursor: pointer;
+
+  transition: color 1s ease, background-color 1s ease, border 1s ease;
+}
+
+.primary:hover {
+  background-color: rgb(164, 204, 247);
+  color: rgb(25, 132, 199);
+  border: 2px solid rgb(53, 110, 208);
+}
+
+.primary:active {
+  background-color: rgb(45, 96, 155);
+  color: rgb(155, 202, 249);
+  border: 2px solid rgb(184, 218, 247);
 }

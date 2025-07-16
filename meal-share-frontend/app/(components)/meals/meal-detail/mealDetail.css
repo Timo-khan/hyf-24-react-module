@@ -4,7 +4,7 @@
   align-items: center;
   overflow-y: scroll;
   width: 80%;
-  height: 420px;
+  height: 480px;
 }
 
 .loading-head {
@@ -55,4 +55,15 @@
 .meal-body {
   color: rgb(3, 176, 63);
   margin: 4px 0px;
+}
+
+.btn-disabled {
+  padding: 8px;
+  background-color: rgb(191, 190, 190);
+  border: 2px gray solid;
+  border-radius: 8px;
+  color: rgb(245, 243, 243);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 480;
 }

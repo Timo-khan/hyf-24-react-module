@@ -19,3 +19,9 @@ export const getMealById = async (id: string) => {
   console.log(result.data.data);
   return result.data.data;
 };
+
+export const getSoldOutMeals = async () => {
+  const result = await http.get("meals?availableReservations=false");
+  console.log(result.data.data);
+  return result.data.data;
+};
